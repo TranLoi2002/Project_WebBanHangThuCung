@@ -1,0 +1,92 @@
+Modal
+#wrapper {
+    min-height: 100vh;
+}
+#modal-container {
+    z-index: 3;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.25s ease-in-out;
+}
+#modal-container.show {
+    opacity: 1;
+    pointer-events: all;
+}
+#modal-container #btn-close {
+   position: absolute;
+   top: 10px;
+   right: 0;
+   border: none;
+   outline: none;
+   background: none;
+   color: #5f5e5e;
+   font-size: 25px;
+   cursor: pointer;
+}
+.modal {
+    background: #fff;
+    max-width: 870px;
+    position: relative;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    transition: all 0.25s ease-in-out;
+}
+#modal-container.show .modal {
+    top: 150px;
+}
+.modal-header h2 {
+    margin: 0;
+    padding: 40px 0 0 20px;
+}
+.modal-header form {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+}
+.modal-header form> label {
+    padding: 30px 0 10px 0;
+}
+.modal-header form input[type="password"],
+.modal-header form input[type="text"] {
+    height: 40px;
+    border: 1px solid #ddd;
+    font-size: 20px;
+    color: #5f5e5e;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+    outline: none;
+}
+.modal-header .btn-dangnhap {
+    margin-top: 20px;
+    align-items: center;
+}
+.modal-header .btn-dangnhap button {
+    background-color: rgb(4, 196, 196);
+    margin-right: 10px;
+    width: 130px;
+    height: 40px;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 3px;
+}
+.modal-header .btn-dangnhap input {
+    margin: 0;
+    margin-right: 10px;
+    width: 15px;
+    height: 15px;
+}
+.modal-header form a {
+    text-decoration: none;
+    margin-top: 15px;
+    color: #232323;
+}
+.modal-header form a:hover {
+    color: rgb(244, 82, 150);
+}
